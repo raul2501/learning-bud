@@ -154,6 +154,10 @@ In rough order:
 
 Push to `main` on GitHub triggers auto-deploy on Vercel.
 
+## Polish tracker
+
+Small cosmetic changes are tracked in `polish.md` in the project root.
+
 ## Deployment
 
 - **Live:** https://learning-bud.vercel.app/
