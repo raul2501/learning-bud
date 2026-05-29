@@ -2172,7 +2172,9 @@ export default function Curriculum() {
                               {section.items.map(item => {
                                 const hasQuestions = QUESTIONS[item.id];
                                 const numQs = hasQuestions ? QUESTIONS[item.id].length : 0;
-                                const numAnswered = hasQuestions ? QUESTIONS[item.id].filter(q => answers[q.qid]?.selfRating).length : 0;
+                                const numAnswered = hasQuestions ? QUESTIONS[item.id].filter(q =>
+                                  q.type === 'mcq' ? answers[q.qid]?.revealed : answers[q.qid]?.selfRating
+                                ).length : 0;
                                 const allAnswered = hasQuestions && numAnswered === numQs;
 
                                 return (
